@@ -3,11 +3,9 @@ title: Agentic Coding in Terminal
 weight: 1
 ---
 
-**Apex Builders Collective** × **Info PC • April** 2026
+**Apex Builders Collective** × **Info PC • May** 2026
 
-[Pre-Workshop Setup Guide](/docs/setup-guide)
 
-> 💁 **Workshop materials** — Use the navigation to browse all sections.
 
 # Foundations
 
@@ -25,9 +23,6 @@ Agentic coding with specs flips this: you handhold Claude Code like a junior eng
 
 Specs are the source of truth in an agent-led coding world. Clearly defined specs ensure that models have a framework to follow and reduce their hallucination rates and confidently-wrong analyses, leading to better output. All development must be spec-anchored and driven.
 
-## Installation & Configuration
-
-> For step-by-step installation instructions (API key setup, Claude Code, Codex, GSD), see the **[Pre-Workshop Setup Guide](/docs/setup-guide)**.
 
 ### Claude Products Overview
 
@@ -39,6 +34,15 @@ Specs are the source of truth in an agent-led coding world. Clearly defined spec
 - Claude API aka Anthropic API refers to the API to call the different Claude LLMs. Billing of LLM calls when using the API is charged by per million token rates of the various models and is much more expensive when compared to using it through a subscription plan.
 - Claude Desktop is the desktop app that allows you to chat, run Co-Work, run Claude Code but in a UI format. This requires a personal Claude account to access, and out of scope for this Claude Code workshop.
 - Claude Code on the web allows for Claude Code sessions that run on Anthropic hardware online, allowing cloud Claude Code sessions that connect to your Github Repos online and do work and also submit PRs directly to the repo. These stay online and can be accessed from Claude Desktop or Claude website.
+
+
+### Why Claude Code (CC), and not other agentic harnesses (Codex, OpenCode, KiloCode)?
+
+Claude Code has been the pioneer of many things in the agentic world, and the other harnesses are simply copying the useful features that Claude Code has. They introduce first party support for these features with further optimizations in the product, while other harnesses might lag or struggle on equivalent implementations. We envisage that Anthropic/Claude Code will still continue to be the pioneer of newer features.
+
+- [Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) (introduced by CC in Oct 2025, now proliferated to other harnesses and OpenClaw as well)
+- CLAUDE.md (introduced by CC on launch in Feb 2025, now proliferated to Codex/other harnesses as AGENTS.md and OpenClaw as well)
+- [MCP](https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation) (introduced by Anthropic in Nov 2024, donated to Linux Foundation in Dec 2025)
 
 ### Useful Claude Code Commands
 
@@ -315,7 +319,7 @@ Run `claude --enable-auto-mode` at launch, and `Shift+Tab` picks it up as a four
 - Auto mode requires **Claude Code v2.1.83+**
 - For Claude Max subscriptions only via Claude Oauth
 - Requires Sonnet 4.6 or newer as the classifier model
-- Admins can disable it org-wide via managed settings (`disableAutoMode: "disable"`)
+- Enterprise Admins can disable it org-wide via managed settings (`disableAutoMode: "disable"`)
 
 **How it works:**
 
@@ -526,9 +530,9 @@ Main Thread: Scope → Dispatch 4 parallel stages → Consolidate → Devil's Ad
 
 ## Automated PR reviews by Codex/Claude/Gemini agents on GitHub
 
-Codex, Gemini and Claude review bots have been added to the organisation on GitHub. Use these bots! 
+Codex, Gemini and Claude review bots are available as automated PR reviewers on GitHub. Use these bots! 
 
-*FYI Claude code-review agent requires a manual process of adding GitHub actions to any repo that wants to trigger it, and also requires setting of `OPENROUTER_API_KEY` in the repo as an actions variable. It cannot be set as a organisation actions variable (which should be the right way) because we are using the free tier of GitHub organisations and not paid tier. Ping KX to add the variable to your repo if needed because the key is a secret.*
+*FYI Claude code-review agent is a bit special from the other 2 and requires a manual process of adding GitHub actions workflow to any repo that wants to use it, and also requires setting of an api key variable in the repo as an actions variable. It cannot be set as a organisation actions variable (which should be the right way) because the free tier of GitHub organisations does not support it.*
 
 1. Open the PR in the respective repos.
 2. Add a comment in the PR with 
@@ -540,7 +544,7 @@ Codex, Gemini and Claude review bots have been added to the organisation on GitH
 @claude review
 ```
 
-1. Make sure that the comment has 3 eyes emoji reactions from the respective bots to signify that they have received the request
+1. Make sure that the comment receives the eyes emoji reaction from the respective bots to signify that they have received the request.
 
 ### Working with GitLab
 

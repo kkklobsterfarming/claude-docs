@@ -61,29 +61,19 @@ C:\Program Files\Git\bin\bash.exe
 
 You'll need an API key from your chosen provider. Here are your options:
 
-#### Option A: LiteLLM Proxy (Self-Hosted / Org-Provided)
-
-If your organization runs a LiteLLM proxy (or you self-host one):
-
-1. Login to your LiteLLM admin UI at `https://your-litellm-proxy.example.com/ui`.
-2. Click "Virtual Keys" on the tabs on the left, and click "Create new key"
-3. Change the following: 
-    1. Team: Select your team, and 
-    2. Enter your key name. 
-    3. Leave everything else as default
-    4. Click "Create Key"
-4. Please note this API key down. You can also regenerate your key if you lost it after creation, by going back to the same page and clicking inside your key.
-5. To view requests made by your API key, go to "Logs" on the left tab, which will show you detailed usage of your requests, including token counts, TTFT. Click on "Usage" tab for aggregated stats of your keys.
-
-#### Option B: OpenRouter
+#### OpenRouter setup steps
 
 [OpenRouter](https://openrouter.ai/) provides unified access to Claude, GPT, Gemini, and many other models through a single API key.
 
-1. Sign up at [openrouter.ai](https://openrouter.ai/)
-2. Go to [Keys](https://openrouter.ai/keys) and create an API key
-3. Add credits under [Credits](https://openrouter.ai/credits)
-4. Your base URL will be `https://openrouter.ai/api`
-5. Note your API key — it starts with `sk-or-`
+1. Skip to [Claude Code installation section](#claude-code) if you already have an OpenRouter key (`sk-or-xxxxxx`).
+2. Sign up at [openrouter.ai](https://openrouter.ai/)
+3. Go to [Keys](https://openrouter.ai/keys) and create an API key
+4. Add credits under [Credits](https://openrouter.ai/credits)
+5. Your base URL will be `https://openrouter.ai/api`
+6. Note your API key — it starts with `sk-or-`
+
+
+
 
 ### Claude Code
 
@@ -107,7 +97,8 @@ If your organization runs a LiteLLM proxy (or you self-host one):
     ```
     
 2. **Skipping Onboarding via `.claude.json` (offline setup only, skip this step if doing online)**
-*When Claude Code launches for the first time, it forces an onboarding wizard that requires OAuth login to an Anthropic or Console account. In offline custom-endpoint setups, **this blocks you entirely**.*
+   
+    *When Claude Code launches for the first time, it forces an onboarding wizard that requires OAuth login to an Anthropic or Console account. In offline custom-endpoint setups, **this blocks you entirely**.*
     
     Manually create/edit `~/.claude.json` with the onboarding flag set.
     
@@ -119,35 +110,12 @@ If your organization runs a LiteLLM proxy (or you self-host one):
     }
     ```
     
-3. Setting Environment Variables to connect to Custom endpoint 
+1. **Setting Claude Code Environment Variables to connect to a custom endpoint**
     
     **Create or Edit Settings File (`~/.claude/settings.json`) (replace with your api key in** `ANTHROPIC_AUTH_TOKEN` )
     
     > 💡 Recommend Version Below ⬇️
-    
-    **Using a LiteLLM Proxy:**
-    
-    ```json
-    {
-      "env": {
-        "ANTHROPIC_BASE_URL": "https://your-litellm-proxy.example.com",
-        "ANTHROPIC_AUTH_TOKEN": "sk-your-api-key",
-        "ANTHROPIC_MODEL": "claude-opus-4-6",
-        "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
-        "CLAUDE_CODE_GIT_BASH_PATH": "C:\\Program Files\\Git\\bin\\bash.exe",
-        "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
-        "ENABLE_TOOL_SEARCH": "1",
-        "CLAUDE_CODE_ATTRIBUTION_HEADER": "0",
-        "ENABLE_LSP_TOOL": "1",
-        "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": "1",
-        "MAX_THINKING_TOKENS": "128000",
-        "DISABLE_AUTO_COMPACT": "1"
-      },
-      "alwaysThinkingEnabled": true,
-      "cleanupPeriodDays": 365
-    }
-    ```
-    
+
     **Using OpenRouter:**
     
     ```json
@@ -171,9 +139,10 @@ If your organization runs a LiteLLM proxy (or you self-host one):
     }
     ```
     
-4. `claude` to launch the CLI in terminal. Select model with `/model` , `/effort`  for reasoning effort
+    
+2. `claude` to launch the CLI in terminal. Select model with `/model` , `/effort`  for reasoning effort
 
-### Codex (ChatGPT's Claude Code Competitor)
+### (Optional) Codex (ChatGPT's Claude Code Competitor)
 
 1. **Installation Via npm** 
     

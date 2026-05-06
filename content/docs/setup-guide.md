@@ -59,7 +59,7 @@ C:\Program Files\Git\bin\bash.exe
 
 ### Getting Your API Key
 
-You'll need an API key from your chosen provider. Here are your options:
+You'll need an API key from your chosen provider.
 
 #### OpenRouter setup steps
 

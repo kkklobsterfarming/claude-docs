@@ -61,6 +61,10 @@ C:\Program Files\Git\bin\bash.exe
 
 You'll need an API key from your chosen provider.
 
+> ℹ️ **For workshop participants:** We will provide your API key. Watch for a follow-up email from us.
+
+If you want to bring your own key, follow the setup steps below.
+
 #### OpenRouter setup steps
 
 [OpenRouter](https://openrouter.ai/) provides unified access to Claude, GPT, Gemini, and many other models through a single API key.

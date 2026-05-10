@@ -33,4 +33,10 @@ layout: hextra-home
     icon="clipboard-list"
     link="docs/cheat-sheet/"
   >}}
+  {{< hextra/feature-card
+    title="Production Security"
+    subtitle="OWASP Top 10 (web + LLM), agentic threats, prompt-time and post-merge review workflows, security tooling, and incident reading."
+    icon="shield-check"
+    link="docs/securing-production-apps/"
+  >}}
 {{< /hextra/feature-grid >}}

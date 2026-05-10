@@ -433,6 +433,8 @@ Useful Claude Code + `gh` workflows:
 1. Code that you are going to push must be simplified, clean, maintainable, readable, secure. For code that is going to be moved to offline environment, they must also be production ready.
 2. Devs should know and understand all lines of code (LOC) in your PR, and must be ready to explain reasoning or rationale behind certain LOC if needed. Please thoroughly review and understand all code.
 
+> 🔐 For the full security companion — OWASP Top 10 (web + LLM), threat-modeling prompt patterns, pre-merge tooling ladders, and incident reading list — see **[Securing AI-Built Apps for Production](/docs/securing-production-apps)**.
+
 #### Possible commands for self code review to run in CC:
 
 1. Use CC's in-built `/simplify` skill with agent teams, get the team to debate and present their debate findings to a synthesizer agent
@@ -777,6 +779,8 @@ Deep Dive Doc: [Skills & Plugins Deep Dive](skills-plugins-deep-dive)
 ## Useful Resources
 
 [Cheat Sheet for Claude Code](cheat-sheet)
+
+[Securing AI-Built Apps for Production](securing-production-apps) — OWASP Top 10 (web + LLM), workflows for both prompt-time and post-implementation review, security tooling ladder, and the news/research/postmortems worth reading.
 
 ## Good Resources
 

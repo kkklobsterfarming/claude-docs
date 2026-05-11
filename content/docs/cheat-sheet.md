@@ -1,6 +1,10 @@
 ---
 title: Cheat Sheet for Claude Code
 weight: 4
+# Pre-workshop lockdown: hidden from sidebar until workshop day.
+# Remove the `sidebar` block (or set exclude: false) to restore.
+sidebar:
+  exclude: true
 ---
 
 A printable reference attendees can take home. One page (ish), organized by "what problem am I solving right now."

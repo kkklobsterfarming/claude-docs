@@ -1,6 +1,10 @@
 ---
 title: Agentic Coding in Terminal
 weight: 1
+# Pre-workshop lockdown: hidden from sidebar until workshop day.
+# Remove the `sidebar` block (or set exclude: false) to restore.
+sidebar:
+  exclude: true
 ---
 
 **Apex Builders Collective** × **Info PC • May** 2026

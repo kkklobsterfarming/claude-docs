@@ -1,11 +1,8 @@
-<!-- Pre-workshop lockdown: llms.txt discovery links removed so the
-     full docs corpus is not advertised. The output formats are also
-     disabled in hugo.yaml so the files are not generated. Restore both
-     before the workshop. -->
-<!--
+<!-- llms.txt discovery — manually emitted on every page (Hugo's
+     auto-alternate would only fire on the home page since that's the only
+     kind that lists these output formats). -->
 <link rel="alternate" type="text/plain" title="LLM-readable site index" href="{{ "llms.txt" | absURL }}">
 <link rel="alternate" type="text/plain" title="Full site content for LLM ingestion" href="{{ "llms-full.txt" | absURL }}">
--->
 
 <!-- Link-preview hints (Telegram, WhatsApp, Slack, X, Facebook, etc.).
      The base og:* / twitter:* tags are emitted by Hextra's opengraph partial

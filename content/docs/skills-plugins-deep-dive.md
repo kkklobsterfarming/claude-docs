@@ -1,10 +1,6 @@
 ---
 title: Skills & Plugins Deep Dive
 weight: 3
-# Pre-workshop lockdown: hidden from sidebar until workshop day.
-# Remove the `sidebar` block (or set exclude: false) to restore.
-sidebar:
-  exclude: true
 ---
 
 This page is a practical guide to skills and plugins for Claude Code.

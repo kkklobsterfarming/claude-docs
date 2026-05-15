@@ -35,29 +35,23 @@ outputFormats:
     notAlternative: true
 
 outputs:
-  # Pre-workshop lockdown: LlmsTxt/LlmsFullTxt removed so the
-  # generated /llms-full.txt does not expose the full docs corpus.
-  # Restore by appending `, LlmsTxt, LlmsFullTxt` before the workshop.
-  home: [HTML, RSS]
+  home: [HTML, RSS, LlmsTxt, LlmsFullTxt]
 
-# Pre-workshop lockdown: navbar menu hidden so attendees only see the
-# setup guide. Uncomment the block below to restore Documentation /
-# Search / GitHub entries.
-# menu:
-#   main:
-#     - identifier: documentation
-#       name: Documentation
-#       pageRef: /docs
-#       weight: 1
-#     - name: Search
-#       weight: 2
-#       params:
-#         type: search
-#     - name: GitHub
-#       weight: 3
-#       url: "https://github.com/stcomiin/claude-docs"
-#       params:
-#         icon: github
+menu:
+  main:
+    - identifier: documentation
+      name: Documentation
+      pageRef: /docs
+      weight: 1
+    - name: Search
+      weight: 2
+      params:
+        type: search
+    - name: GitHub
+      weight: 3
+      url: "https://github.com/stcomiin/claude-docs"
+      params:
+        icon: github
 
 params:
   # Site description. Read by Hextra's opengraph and page-description
@@ -71,10 +65,11 @@ params:
   images:
     - images/og-cover.png
 
-  # Pre-workshop lockdown: banner disabled — it advertised /llms-full.txt
-  # which would have leaked the full docs corpus. Restore by uncommenting.
-  # banner:
-  #   key: llms-banner-v1
+  # Hextra's built-in banner. Inner content is supplied by
+  # layouts/partials/custom/banner.html. `key` is the localStorage flag
+  # tracking dismissal — bump it to force-re-show after content changes.
+  banner:
+    key: llms-banner-v1
 
   navbar:
     displayTitle: true
@@ -88,9 +83,7 @@ params:
   footer:
     enable: true
     displayCopyright: true
-    # Pre-workshop lockdown: "Powered by Hextra" link removed because it
-    # points to a GitHub repo. Flip back to true to restore.
-    displayPoweredBy: false
+    displayPoweredBy: true
 
   search:
     enable: true
@@ -100,9 +93,7 @@ params:
       tokenize: forward
 
   editURL:
-    # Pre-workshop lockdown: "Edit this page" link disabled to hide the
-    # GitHub repo. Flip back to true to restore.
-    enable: false
+    enable: true
     base: "https://github.com/stcomiin/claude-docs/edit/main/content"
 
   highlight:

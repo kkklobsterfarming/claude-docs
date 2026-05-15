@@ -1,11 +1,6 @@
 ---
 title: Pre-Workshop Setup Guide
 weight: 2
-# Pre-workshop lockdown: prev/next page pager hidden so the bottom of the
-# article does not link to the (otherwise hidden) sibling docs. Remove
-# these two lines (or set them to true) to restore the pager.
-prev: false
-next: false
 ---
 
 **Agentic Coding in Terminal** — Apex Builders Collective × Info PC
